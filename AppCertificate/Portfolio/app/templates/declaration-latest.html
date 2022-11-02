@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS */
+          
+        body {
+            background-color: #fff;
+            font-family: Verdana;
+            text-align: center;
+        }
+        
+        .container {
+        display: flex;
+        width: 100px; 
+        height: 100px; 
+        flex-wrap: wrap;
+        }
+        .container .box {
+          flex-basis: 50%;
+        }
+
+        .start {
+          width: 200px;
+          height: 200px;
+          margin-left: 25px;
+        }
+
+        .kubeimg{
+          width: 250px;
+          height: 250px;
+        }
+
+        .small-flex {
+          float: left;
+        }
+        #small-flex {
+          float: right;
+          font-size: 30px;
+        }
+        .small-flex {
+            display: flex;
+        }
+
+        .flex-child:first-child {   
+            margin-right: 20px;
+        }
+
+        .green {
+          text-align: center;
+          margin-left: 30px;
+        }
+
+        .magenta {
+            width: 1800px;
+            margin-top: 5%;
+            font-size: 30px;
+        }
+        
+  
+        h1 {
+          font-size: 60px;
+          color: #00539CFF;
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <h1>Last entry ! - {{content[2]}} {{content[3]}} </h1>
+    <div class="container">
+        <div class="small-flex">
+
+          <div class="flex-child magenta">
+            1. {{content[4]}}
+          </div>
+          
+        </div>
+        <div class="small-flex">
+
+          <div class="flex-child magenta">
+            2. {{content[5]}}
+          </div>
+          
+          
+        </div>
+        <div class="small-flex">
+
+          <div class="flex-child magenta">
+           3. {{content[6]}}
+          </div>
+        </div>
+        <div class="small-flex">
+
+          <div class="flex-child magenta">
+           4. {{content[7]}}
+          </div>
+          
+        </div>     
+    </div>
+</body>
+</html>

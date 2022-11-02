@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            background-color: #fff;
+            font-family: Verdana;
+            text-align: center;
+        }
+        .floated {
+        float:left;
+        margin-right:5px;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        h1 {
+          color: #00539CFF;
+          font-size: 60px;
+          margin-top: 50px;
+        }
+
+        #slide_start_button {
+         width: 250px;
+         height: 120px;
+         background-color: #00539CFF;
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        color: #fff;
+        font-size: 26px;
+        }
+        #slide_start_button:hover {
+         background-color: #4c9e9e;
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <h1>Change your declaration</h1>
+    <div class="button">
+        <a href="/change/update/id" class="floated"><input type="button" id="slide_start_button" value="Update"></a>
+        <a href="/change/delete/id" class="floated"><input type="button" id="slide_start_button" value="Delete"></a>
+    </div>
+</body>
+</html>

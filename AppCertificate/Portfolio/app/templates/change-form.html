@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: Verdana;
+            text-align: center;
+        }
+
+        h1 {
+          color: #00539CFF;
+          font-size: 60px;
+          margin-bottom: 40px;
+        }
+        .form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+              /* Styling form-control Class */
+              .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #00539CFF;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            color: #fff;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            height: 40px;
+        }
+        button:hover {
+            background-color: #4c9e9e
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <form class="form" method="post">
+        <h1> Update </h1>
+        <div class="form-control">
+            <label for="first_place" id="label-first_place">
+                First Place
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="first_place">
+                <option value="Certified Kubernetes Administrator">Certified Kubernetes Administrator</option>
+                <option value="Azure Administrator Associate">Azure Administrator Associate</option>
+                <option value=" Google Cloud Associate Cloud Engineer">
+                  Google Cloud Associate Cloud Engineer
+                </option>
+                <option value="AWS Certified Solutions Architect">AWS Certified Solutions Architect</option>
+            </select>
+        </div>
+        <div class="form-control">
+          <label for="second_place" id="second_place">
+              Second Place
+          </label>
+           
+          <!-- Dropdown options -->
+          <select name="second_place" id="second_place">
+            <option value="Certified Kubernetes Administrator">Certified Kubernetes Administrator</option>
+            <option value="Azure Administrator Associate">Azure Administrator Associate</option>
+            <option value=" Google Cloud Associate Cloud Engineer">
+              Google Cloud Associate Cloud Engineer
+            </option>
+            <option value="AWS Certified Solutions Architect">AWS Certified Solutions Architect</option>
+          </select>
+      </div>
+      <div class="form-control">
+        <label for="third_place" id="third_place">
+            Third Place
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="third_place" id="third_place">
+            <option value="Certified Kubernetes Administrator">Certified Kubernetes Administrator</option>
+                <option value="Azure Administrator Associate">Azure Administrator Associate</option>
+                <option value=" Google Cloud Associate Cloud Engineer">
+                  Google Cloud Associate Cloud Engineer
+                </option>
+                <option value="AWS Certified Solutions Architect">AWS Certified Solutions Architect</option>
+        </select>
+    </div>
+    <div class="form-control">
+      <label for="fourth_place" id="fourth_place">
+          Fourth place
+      </label>
+       
+      <!-- Dropdown options -->
+      <select name="fourth_place" id="fourth_place">
+        <option value="Certified Kubernetes Administrator">Certified Kubernetes Administrator</option>
+        <option value="Azure Administrator Associate">Azure Administrator Associate</option>
+        <option value=" Google Cloud Associate Cloud Engineer">
+          Google Cloud Associate Cloud Engineer
+        </option>
+        <option value="AWS Certified Solutions Architect">AWS Certified Solutions Architect</option>
+      </select>
+    </div>
+  
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</body>
+</html>

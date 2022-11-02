@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+ 
+  mydb:
+    image: mysql
+    ports:
+      - "3306:3306"
+    command: --init-file /data/application/init.sql
+    volumes:
+        - ./init.sql:/data/application/init.sql
+        - wow15:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mydatabase
+
+  app:
+    image: flaskcertification2
+    links:
+      - mydb
+    depends_on:
+      - "mydb"
+    ports:
+      - "5000:5000"
+
+
+
+
+volumes:
+    wow15:
+      name: wow15
